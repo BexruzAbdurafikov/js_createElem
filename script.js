@@ -1,8 +1,7 @@
 const container = document.querySelector(`.container`)
 
 function draw(arr) {
-    container.innerHTML = "" // Очищаем контейнер перед добавлением товаров
-
+    container.innerHTML = '';
     for (let item of arr) {
         const product = document.createElement(`div`)
         const image = document.createElement(`img`)
@@ -23,10 +22,9 @@ function draw(arr) {
         image.src = item.img
         h3.textContent = item.title
         p.textContent = item.desc
-        span01.innerHTML = item.span01 || "" // Проверяем наличие данных перед вставкой
-        span02.innerHTML = item.span02 || ""
-        span03.innerHTML = item.span03 || ""
-
+        span01.innerHTML = item.span01
+        span02.innerHTML = item.span02
+        span03.innerHTML = item.span03
         btn.textContent = item.btn
 
         info.append(span01, span02, span03)
@@ -43,3 +41,15 @@ function draw(arr) {
 }
 
 draw(posts)
+
+const btnShow5 = document.querySelector(`#show5`)
+const btnShowAll = document.querySelector(`#showAll`)
+
+btnShow5.addEventListener(`click`, () => {
+    const product5 = posts.slice(0, 5)
+    draw(product5)
+});
+
+btnShowAll.addEventListener(`click`, () => {
+    draw(posts)
+});
