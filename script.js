@@ -1,5 +1,8 @@
 const container = document.querySelector(`.container`)
+
 function draw(arr) {
+    container.innerHTML = "" // Очищаем контейнер перед добавлением товаров
+
     for (let item of arr) {
         const product = document.createElement(`div`)
         const image = document.createElement(`img`)
@@ -18,11 +21,12 @@ function draw(arr) {
         btn.classList.add(`btn`)
 
         image.src = item.img
-        h3.innerHTML = item.title
-        p.innerHTML = item.desc
-        span01.innerHTML = item.span01
-        span02.innerHTML = item.span02
-        span03.innerHTML = item.span03
+        h3.textContent = item.title
+        p.textContent = item.desc
+        span01.innerHTML = item.span01 || "" // Проверяем наличие данных перед вставкой
+        span02.innerHTML = item.span02 || ""
+        span03.innerHTML = item.span03 || ""
+
         btn.textContent = item.btn
 
         info.append(span01, span02, span03)
