@@ -15,12 +15,23 @@
 
 <body>
     <div class="main">
-        <h1>В корзине: 1 товар</h1>
-        <button id="show5">Показать первые 5</button>
-        <button id="showAll">Показать все</button>
+        <h1>В корзине: <b id="count">1</b> товар</h1>
+        <div class="buttons">
+            <button id="show5">Показать первые 5</button>
+            <button id="showAll">Показать все</button>
+            <button id="showCart">Корзина</button>
+        </div>
     </div>
     <div class="container"></div>
+    <div class="cart">
+        <img id="close" src="./images/Group 6 (1).png" alt="">
+        <div class="cartContainer">
+
+        </div>
+    </div>
     <script src="./arr-obj.js"></script>
+    <script src="./utils/modal.js"></script>
+    <script src="./utils/draw.js"></script>
     <script src="./script.js"></script>
 </body>
 
