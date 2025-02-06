@@ -160,6 +160,7 @@ span {
     min-height: 474px;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
 }
 
 .btn {
