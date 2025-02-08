@@ -195,12 +195,14 @@ span {
     text-align: center;
     position: fixed;
     top: -100px;
-    transition: 0.3s;
+    transition: top 0.5s ease, opacity 0.5s ease;
     color: white;
+    opacity: 0;
 }
 
 .show {
     top: 0;
+    opacity: 1;
 }
 
 .hide{
